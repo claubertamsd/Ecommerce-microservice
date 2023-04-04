@@ -1,0 +1,10 @@
+com\dev\productservice\model\Product.class
+com\dev\productservice\repository\ProductRepository.class
+com\dev\productservice\dto\ProductResponse$ProductResponseBuilder.class
+com\dev\productservice\controller\ProductController.class
+com\dev\productservice\service\ProductService.class
+com\dev\productservice\dto\ProductRequest$ProductRequestBuilder.class
+com\dev\productservice\dto\ProductRequest.class
+com\dev\productservice\model\Product$ProductBuilder.class
+com\dev\productservice\dto\ProductResponse.class
+com\dev\productservice\ProductServiceApplication.class
