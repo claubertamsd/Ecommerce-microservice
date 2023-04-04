@@ -6,7 +6,10 @@ import com.dev.productservice.model.Product;
 import com.dev.productservice.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
@@ -21,6 +24,10 @@ public class ProductService {
                 .description(productRequest.getDescription())
                 .price(productRequest.getPrice())
                 .build();
+
+        if(product == null){
+            throw new ResponseStatusException(HttpStatus.NO_CONTENT, "Insira um produto válido");
+        }
         repository.save(product);
         log.info("Product {} is saved", product.getId());
     }
